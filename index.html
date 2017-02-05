@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <label>Brand</label> <input class="form-control" type='text' ng-model='carname'>
+        <label>Motor</label><input class="form-control" type="text" ng-model='moter'>
+        <label>Color</label><input class="form-control" type="text" ng-model='color'>
+        <h1>Brand :{{carname}}</h1>
+        <h1>hourses: {{moter}}</h1>
+        <h1>hourses: {{color}}</h1>
+        <div>
+             <ul class="list-group" ng-repeat="key in player.kills">
+                 <li class="list-group-item"><b>1</b></li>  
+         <li class="list-group-item">
+           {{key.handle}}
+         </li>
+         <li class="list-group-item">
+           {{key.rank}}
+         </li>
+                 <li class="list-group-item">
+                    <ul  class="list-group"ng-repeat="x in key.clan">
+                        <li class="list-group-item">{{x}}</li>
+                     </ul> 
+                     
+                 </li>
+             </ul>
+              
+            
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
